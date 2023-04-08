@@ -1,5 +1,5 @@
 {% set name = "fast_matrix_market" %}
-{% set version = "1.4.5" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast-matrix-market-{{ version }}.tar.gz
-  sha256: 578745f0784f4dc8e123bf931e53fdebe77feb897cc3f87f86a1a8162fa418ba
+  sha256: d1ec5faee13b2f4783c1680e7e7a64d4ddbf6e949e49ba062de986f846a1589b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
