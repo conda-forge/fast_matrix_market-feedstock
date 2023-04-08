@@ -1,11 +1,11 @@
-About fast_matrix_market
-========================
+About fast_matrix_market-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fast_matrix_market-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/alugowski/fast_matrix_market
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fast_matrix_market-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fast and full-featured Matrix Market file I/O
 
