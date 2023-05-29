@@ -17,6 +17,9 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make     # [not win]
+    - ninja    # [win]
+    - python
   host:
     - python
     - scikit-build-core
@@ -25,7 +28,7 @@ requirements:
   run:
     - python
     - libstdcxx-ng  # [linux]
-    - libcxx  # [osx]
+    - libcxx        # [osx]
 
 test:
   imports:
