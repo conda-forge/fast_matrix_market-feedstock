@@ -39,7 +39,9 @@ test:
   requires:
     - pip
     - pytest
-    - scipy
+# temporary workaround for a SciPy bug on PyPy 3.9 on Windows
+    - numpy
+    - scipy   # [not win or py!=39]
     - threadpoolctl
   source_files:
     - tests/
