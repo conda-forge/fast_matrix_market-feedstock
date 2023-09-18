@@ -1,13 +1,13 @@
 {% set name = "fast_matrix_market" %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast-matrix-market-{{ version }}.tar.gz
-  sha256: ed75ea397408c545ebdf8b57b0e67da73bdbb3e40a4b2ae9a044b8a9a6190416
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 24c6787a86d3c992fab06283c917c7ed10266f9f18c3361f0d3e800cd6fdbdf2
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -39,7 +39,10 @@ test:
   requires:
     - pip
     - pytest
-    - scipy
+# temporary workaround for a SciPy bug on PyPy 3.9 on Windows
+    - numpy
+    - scipy   # [not win or py!=39]
+    - threadpoolctl
   source_files:
     - tests/
 
