@@ -28,7 +28,6 @@ requirements:
   run:
     - python
     - libstdcxx-ng  # [linux]
-    - libcxx        # [osx]
 
 test:
   imports:
